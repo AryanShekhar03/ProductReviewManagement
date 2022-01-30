@@ -43,6 +43,15 @@ namespace ProductReviewManagement
             {
                 Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
+
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Top 3 Records from list \n");
+
+            Management management = new Management();
+
+            management.RetrieveTop3Records(productlist);
+
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------");
+
         }
     }
 }
