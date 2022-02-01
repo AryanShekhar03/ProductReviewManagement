@@ -39,22 +39,19 @@ namespace ProductReviewManagement
                 new ProductReview() { ProductId = 4, UserId = 5, Rating = 4.1, Review = "Good    ", isLike = true }
             };
 
-            foreach (var list in productReviewlist)
+            foreach (var list in productlist)
             {
                 Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Count Of Review For Each ProductId \n");
 
-            //Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Top 3 Records from list \n");
+            Management management = new Management();
 
-            //Management management = new Management();
-
-            //management.RetrieveTop3Records(productlist);
-
-            //Console.WriteLine("\n------------------------------------------------------------------------------------------------");
-            Management.RetrieveRecordsWithGreaterThanThreeRating(productlist);
+            management.RetrieveCountOfReviewForEachProductId(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
             Console.ReadLine();
+
         }
     }
 }
