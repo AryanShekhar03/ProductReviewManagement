@@ -47,7 +47,7 @@ namespace ProductReviewManagement
 
             Management management = new Management();
 
-            management.RetrieveCountOfReviewForEachProductId(productlist);
+            management.SkipTopFiveRecords(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
             Console.ReadLine();
